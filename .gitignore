@@ -324,5 +324,5 @@ AMENT_IGNORE
 *.vob
 *.wmv
 *.webm
-
+*.zip
 # End of https://www.toptal.com/developers/gitignore/api/python,ros,ros2,images,video
