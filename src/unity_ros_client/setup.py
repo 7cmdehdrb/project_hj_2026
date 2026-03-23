@@ -24,6 +24,9 @@ setup(
     },
     entry_points={
         'console_scripts': [
+            'cmd_publisher = unity_ros_client.cmd_publisher:main',
+            'cmd_publisher_timer = unity_ros_client.cmd_publisher_timer:main',
+            'pcd_service = unity_ros_client.pcd_service:main',    
         ],
     },
 )

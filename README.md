@@ -23,32 +23,25 @@
 - 컨트롤러 "Pose" 발행 (Player 원점에 대하여 Local Pose)
 
 ---
+pcd 발행 방법
 
 ros2 service call /publish_pcd_trigger std_srvs/srv/Trigger
 
 
 ----
-irol wifi연결하면 tcp 통신이 안됨. 
-
-vr기기, 컴퓨터 둘다 hotspot으로 연결하는 편이 나음
 
 
 
-##
-손 기준을 origin, frame = origin
-xr orin - tf -  world
+## TF tree
 
-tf 
-    world
-        -mobile
-            -ur5e
-        -xr_origin
-            -xr_head
-            -left_controller
-            -right_controller
+
+world
+    -mobile   
+        -ur5e
+    -xr_origin
+        -xr_head
+        -left_controller
+        -right_controller
 
 
 
-xr_origin pose publish,
-anipulator gripper 다시 추가 wrist3 
-ip 수정되게
