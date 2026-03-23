@@ -32,16 +32,17 @@ ros2 service call /publish_pcd_trigger std_srvs/srv/Trigger
 
 
 
-## TF tree
+## TF Tree
 
-
-world
-    -mobile   
-        -ur5e
-    -xr_origin
-        -xr_head
-        -left_controller
-        -right_controller
+```mermaid
+graph TD
+    world --> mobile
+    mobile --> ur5e
+    world --> xr_origin
+    xr_origin --> xr_head
+    xr_origin --> left_controller
+    xr_origin --> right_controller
+```
 
 
 
