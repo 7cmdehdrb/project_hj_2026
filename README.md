@@ -45,4 +45,15 @@ graph TD
 ```
 
 
+---
 
+## 0325
+
+실제 joint state랑 mobile pose를 받아올꺼니까, unity client똑에서 topic명 변경해야됨. 
+joint state name field 순서가 뒤죽박죽이니까 알잘딱깔센으로 적용되게 .
+
+pcd service를 커스텀으로 바꿔서 다운샘플링 파라미터도 받아서 할수있게(유니티에서 해도 나음) 그리고 발행된게 유니티에서 받았는지 몰르니까 여러번 발행도 생각.
+
+---이번주 내
+ur control = rtde 라는거 쓸거임
+ur5e ursim 써서 오른쪽 컨트롤러 pose, joy(특정 버튼 누르고 있는 동안)를 받아서, 그동안 움직인 변화량 (pose delta)받아서 매니퓰레이터 엔드 이펙트에 적용 => "moveL쓰지 말것"
