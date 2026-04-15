@@ -1,6 +1,6 @@
 from setuptools import find_packages, setup
 
-package_name = 'unity_ros_client'
+package_name = 'robot_control'
 
 setup(
     name=package_name,
@@ -10,7 +10,6 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
-        ('share/' + package_name + '/resource/data', ['resource/data/240910_noiseX.pcd', 'resource/data/241108.pcd', 'resource/data/global_241127.pcd', 'resource/data/segmented_240910_noiseX.pcd']),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -25,10 +24,10 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'cmd_publisher = unity_ros_client.cmd_publisher:main',
-            'cmd_publisher_timer = unity_ros_client.cmd_publisher_timer:main',
-            'pcd_service = unity_ros_client.pcd_service:main',
-            'pcd_custom_service = unity_ros_client.pcd_custom_service:main',
+            'test_node = robot_control.test:main',
+            'joint_state_publisher = robot_control.joint_state_publisher:main',
+            'quest_teleop = robot_control.quest_teleop:main',
+            'test_servo = robot_control.test_servo:main',
         ],
     },
 )

@@ -15,17 +15,17 @@ class RosCmdGuiTimer(Node):
         super().__init__("ros_cmd_gui_timer")
 
         # Publishers
-        self.joint_pub = self.create_publisher(JointState, "/cmd_joint_state", 10)
+        self.joint_pub = self.create_publisher(JointState, "/joint_states__", 10)
         self.pose_pub = self.create_publisher(PoseStamped, "/cmd_pose", 10)
 
         # Joint Names for UR5e
         self.joint_names = [
-            "shoulder_link",
-            "upper_arm_link",
-            "forearm_link",
-            "wrist_1_link",
-            "wrist_2_link",
-            "wrist_3_link",
+            "shoulder_pan_joint",
+            "shoulder_lift_joint",
+            "elbow_joint",
+            "wrist_1_joint",
+            "wrist_2_joint",
+            "wrist_3_joint",
         ]
 
         self.setup_gui()

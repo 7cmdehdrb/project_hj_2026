@@ -1,0 +1,6 @@
+bool trigger
+int64 index
+int64 sampling_value
+---
+bool success
+string message
